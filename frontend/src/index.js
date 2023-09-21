@@ -6,10 +6,16 @@ import { store } from "./store";
 
 import App from "./components/App";
 import { BrowserRouter } from "react-router-dom";
+import GlobalStyle from "./styles/GlobalStyle";
+import Banner from "./components/Home/Banner";
+
 
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter basename="/">
+      <Banner>
+        <GlobalStyle />
+      </Banner>
       <App />
     </BrowserRouter>
   </Provider>,
